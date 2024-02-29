@@ -2,8 +2,25 @@
 <html>
 <head>
     <title>Hello World</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+            font-size: 10em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Hau šůr em áj?</h1>
+    <h2 id="percentage"></h2>
+    <script>
+        setInterval(() => {
+            const baseline = 79.7;
+            const sigma = 2;
+            const randomNum = Math.random() * sigma * 2 - sigma;
+            const result = baseline + randomNum;
+            const percentage = result.toFixed(2);
+            document.getElementById("percentage").innerHTML = percentage + "%";
+        }, 1500);
+    </script>
 </body>
 </html>
