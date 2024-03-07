@@ -5,7 +5,7 @@
     <style>
         h1, h2 {
             text-align: center;
-            font-size: 10em;
+            font-size: 10rem;
         }
     </style>
 </head>
@@ -14,8 +14,8 @@
     <h2 id="percentage"></h2>
     <script>
         setInterval(() => {
-            const baseline = 79.7;
-            const sigma = 2;
+            const baseline = 62.3;
+            const sigma = 20;
             const randomNum = Math.random() * sigma * 2 - sigma;
             const result = baseline + randomNum;
             const percentage = result.toFixed(2);
