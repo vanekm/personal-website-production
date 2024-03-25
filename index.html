@@ -7,10 +7,39 @@
             text-align: center;
             font-size: 10rem;
         }
+        h2 {
+            font-size: 6rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Hau šůr em áj?</h1>
+
+    <h1>Kánd?</h1>
+    <h2 id="countdown"></h2>
+
+    <script>
+        const countdown = document.getElementById("countdown");
+        const deadline = new Date("2024-03-29T17:52:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = "ó " + days + "žůr " + hours + "ér " + minutes + "minyt " + seconds + "segóónd";
+
+            if (distance < 0) {
+                countdown.innerHTML = "alónz i";
+            }
+
+        }, 1000);
+    </script>
+
+    <!-- <h1>Hau šůr em áj?</h1>
     <h2 id="percentage"></h2>
     <script>
         setInterval(() => {
@@ -21,6 +50,6 @@
             const percentage = result.toFixed(2);
             document.getElementById("percentage").innerHTML = percentage + "%";
         }, 1500);
-    </script>
+    </script> -->
 </body>
 </html>
