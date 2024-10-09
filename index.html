@@ -1,55 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Hello Verč</title>
-    <style>
-        h1, h2 {
-            text-align: center;
-            font-size: 10rem;
-        }
-        h2 {
-            font-size: 6rem;
-        }
-    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
+
+
+    <title>Martin Vaněk</title>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Language" content="cs">
+
+    <!-- Description -->
+    <meta name="description"
+        content="Student of theoretical physics, head organizer of FYKOS, a group organizing educational events in physics for thousands of high-school students worldwide.">
+    <!-- Author -->
+    <meta name="author" content="Martin Vaněk">
+    <!-- Keywords -->
+    <!-- TODO -->
+    <!-- <meta name="keywords"
+    content=""> -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.svg" />
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
 
-    <h1>Kánd?</h1>
-    <h2 id="countdown"></h2>
+<body id="page-top">
 
-    <script>
-        const countdown = document.getElementById("countdown");
-        const deadline = new Date("2024-03-29T17:52:00").getTime();
 
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = deadline - now;
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="navbar-logo me-2 d-flex align-items-center">
+                    <a href="#page-top">
+                        <img src="images/favicon.svg" alt="Logo">
+                    </a>
+                </div>
+                <a class="navbar-brand d-flex align-items-center" href="#page-top">
+                    <h2 class="mb-0">Martin Vaněk</h2>
+                </a>
+            </div>
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            <!-- Mobile menu toggle button -->
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
 
-            countdown.innerHTML = "ó " + days + "žůr " + hours + "ér " + minutes + "minyt " + seconds + "segóónd";
+            <!-- <div class="collapse navbar-collapse custom-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item me-lg-5 me-2">
+                        <a class="nav-link nav-text px-4" href="#mediace">Nějaké</a>
+                    </li>
+                    <li class="nav-item me-lg-5 me-2">
+                        <a class="nav-link nav-text px-4" href="#pravo">položky</a>
+                    </li>
+                    <li class="nav-item me-lg-5 me-2">
+                        <a class="nav-link nav-text px-4" href="#kontakt">v</a>
+                    </li>
+                    <li class="nav-item me-lg-5 me-2">
+                        <a class="nav-link nav-text px-4" href="#o-nas">menu</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
 
-            if (distance < 0) {
-                countdown.innerHTML = "alónz i";
-            }
+    <main>
+        <!-- About -->
+        <section id="o-nas" class="section-switch-color py-5">
+            <div class="fade-in-section container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-10  mt-2">
+                        <img src="images/personal-photo-square.jpeg" class="portrait-image rounded-circle"
+                            alt="Portrait of Martin Vaněk">
+                    </div>
+                    <div class="col-lg-8 offset-lg-1 col-md-8 mt-md-1 mt-4">
+                        <h2 class="section-header">About Me</h2>
+                        <p>
+                            I am the Head Organizer (Executive Director) <span class="emphasis-text">leading FYKOS</span> – a group of ~60 students organizing major
+                            non-profit educational events in physics for high-school
+                            students – e.g., <a href="https://fyziklani.org">Fyziklani</a> (~1200 participants from 21
+                            countries in person in Prague), and
+                            <a href="https://physicsbrawl.org">Physics Brawl Online</a>
+                            (over 4500 participants from over 60 countries).<br>Leading FYKOS, I gained experience with
+                            leadership, (project) management, community building, running a non-profit,
+                            educating and
+                            lecturing, outreach, communication with high-ranking officials of companies and governments,
+                            etc.
+                        </p>
+                        <p>
+                            I study <span class="emphasis-text">theoretical physics</span> at Charles
+                            University
+                            in Prague. I am interested in
+                            statistical physics, especially its applications in
+                            machine learning and making artificial intelligence safer and more beneficial to humanity.
+                        </p>
+                        <p>
+                            Sometimes, I do other things, like helping out at <a
+                                href="https://www.fabric.camp/">camps</a>
+                            teaching applied rationality to
+                            highly talented young minds, or organizing events for promoting <a
+                                href="https://www.givingwhatwecan.org/">giving to effective charities</a>.
+                        </p>
+                        <p>
+                            I enjoy bouldering, reading educational non-fiction (Sapiens, The Power of Habit, 12 Rules
+                            for
+                            Life, etc.),
+                            trying to maximize my productivity (while not burning out), and the company of
+                            pink
+                            plushy octopi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        }, 1000);
-    </script>
+        <!-- Testimonials -->
+        <!-- <section id="testimonials" class="section-switch-color py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-header">Testimonials</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, velit vel
+                                aliquet
+                                consectetur, nunc nunc lacinia magna, nec tincidunt elit nunc ac nunc."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/person1.jpg" class="testimonial-avatar" alt="Person 1">
+                            <h4>John Doe</h4>
+                            <p>CEO, Company A</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Sed <a href="text"> ut perspiciatis unde</a> omnis iste natus error sit voluptatem
+                                accusantium doloremque
+                                laudantium,
+                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                                beatae vitae
+                                dicta sunt explicabo."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/person2.jpg" class="testimonial-avatar" alt="Person 2">
+                            <h4>Jane Smith</h4>
+                            <p>CTO, Company B</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/person3.jpg" class="testimonial-avatar" alt="Person 3">
+                            <h4>David Johnson</h4>
+                            <p>COO, Company C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-    <!-- <h1>Hau šůr em áj?</h1>
-    <h2 id="percentage"></h2>
-    <script>
-        setInterval(() => {
-            const baseline = 62.3;
-            const sigma = 20;
-            const randomNum = Math.random() * sigma * 2 - sigma;
-            const result = baseline + randomNum;
-            const percentage = result.toFixed(2);
-            document.getElementById("percentage").innerHTML = percentage + "%";
-        }, 1500);
-    </script> -->
+    </main>
+    <!-- Footer -->
+    <footer class="py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <p>&copy; Martin Vaněk, 2024</p> -->
+                    <div class="contact-icons">
+
+                        <span class="icon">
+                            <a href="documents/cv.pdf" target="_blank" class="link-no-decor"><i
+                                    class="fas fa-download"></i>
+                                CV</a>
+                        </span>
+                        <span class="icon">
+                            <i class="far fa-envelope"></i> martin.vanek42@gmail.com
+                        </span>
+                        <span class="icon social-media-icon">
+                            <a href="https://www.facebook.com/martin.vanek42" target="_blank" class="fb-logo"><i
+                                    class="fab fa-facebook-square"></i></a>
+                        </span>
+                        <span class="icon social-media-icon">
+                            <a href="https://www.linkedin.com/in/martin-vanek42" target="_blank" class="li-logo"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </span>
+                        <span class="icon">
+                            <i class="fas fa-map-marker-alt"></i> Prague
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

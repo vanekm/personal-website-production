@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #0b68c5;
+
+    --first-color: white;
+    --second-color: var(--primary-color);
+
+    --first-text-color: black;
+    --second-text-color: white;
+}
+
+
+.link-no-decor {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.emphasis-text {
+    font-weight: bold;
+}
+
+
+.container {
+    padding: 0 2rem;
+}
+
+.section-switch-color {
+    background-color: var(--first-color);
+    color: var(--first-text-colors);
+
+    h1,
+    h2,
+    h3,
+    .emphasis-text,
+    a {
+        color: var(--primary-color);
+    }
+
+    a:hover {
+        color: black;
+    }
+}
+
+.section-switch-color:nth-of-type(2n) {
+    background-color: var(--second-color);
+    color: var(--second-text-color);
+
+    h1,
+    h2,
+    h3,
+    .emphasis-text,
+    a {
+        color: var(--second-text-color);
+    }
+
+    a:hover {
+        color: black;
+    }
+}
+
+
+p {
+    text-align: justify;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid black;
+}
+
+.navbar-logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #aaa;
+}
+
+.navbar-brand h2 {
+    font-size: 1.5rem;
+}
+
+
+
+/* About */
+
+.portrait-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.social-media-icon {
+    font-size: 1.5rem;
+}
+
+.icon {
+    a {
+        color: white;
+    }
+
+    .fb-logo:hover {
+        color: #3b5998;
+    }
+
+    .li-logo:hover {
+        color: #0072b1;
+    }
+
+}
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: black;
+    color: white;
+
+    p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* Positioning */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
